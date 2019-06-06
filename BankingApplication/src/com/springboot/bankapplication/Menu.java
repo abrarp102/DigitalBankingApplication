@@ -24,13 +24,14 @@ public class Menu  {
 	}
 	
 	private static void printFooter() {
-		System.out.println("__________________________________________");
+		//System.out.println("__________________________________________");
+		 System.out.println("******************************************");
 	}
 
 	private static void welcomeMenu() {
 
 		System.out.println();
-		System.out.println("Welcome to Bank of Java" + "\n\n1. I am a customer" + "\n2. I do not have an account"
+		System.out.println("Welcome to Java Digital Banking!" + "\n\n1. I am a customer" + "\n2. I do not have an account"
 				+ "\n0. Close Program" + " \n\nPlease make a selection:");
 		Scanner kbd = new Scanner(System.in);
 
@@ -125,7 +126,6 @@ public class Menu  {
 			
 		}
 				
-
 	public static void verifyLogin() {
 		Scanner kbd = new Scanner(System.in);
 		int loginuserID = 0;
@@ -153,7 +153,6 @@ public class Menu  {
 					found = true;
 					System.out.println();
 					System.out.println("Login Succesful!!");
-					System.out.println("__________________________________________");
 				}
 
 			}
