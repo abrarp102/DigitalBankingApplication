@@ -112,7 +112,7 @@ public class Menu  {
 				System.out.println("Invalid choice! \nPlease choose either enter option 1,2,3 or 0!");
 				printFooter();
 		}
-		}while(!quit);
+		}while(!quit); // Exception handling
 		} catch (InputMismatchException e) {
 			System.out.println();
 			System.out.println("Invalid Entry");
