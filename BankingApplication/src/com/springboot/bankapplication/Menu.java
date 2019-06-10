@@ -6,7 +6,7 @@ import java.io.FileNotFoundException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Menu  {
+public class Menu {
 
 	private static boolean quit = false;
 
@@ -18,21 +18,21 @@ public class Menu  {
 
 	private static void printHeader() {
 		System.out.println("+----------------------------------------+");
-		System.out.println("|        Welcome to Digital Banking      |");
+		System.out.println("|        Welcome to Java Digital Banking |");
 		System.out.println("|        Awesome Digital Banking App     |");
 		System.out.println("+----------------------------------------+");
 	}
-	
+
 	private static void printFooter() {
-		//System.out.println("__________________________________________");
-		 System.out.println("******************************************");
+		// System.out.println("__________________________________________");
+		System.out.println("******************************************");
 	}
 
 	private static void welcomeMenu() {
 
 		System.out.println();
-		System.out.println("Welcome to Java Digital Banking!" + "\n\n1. I am a customer" + "\n2. I do not have an account"
-				+ "\n0. Close Program" + " \n\nPlease make a selection:");
+		System.out.println("Welcome to Java Digital Banking!" + "\n\n1. I am a customer"
+				+ "\n2. I do not have an account" + "\n0. Close Program" + " \n\nPlease make a selection:");
 		Scanner kbd = new Scanner(System.in);
 
 		try {
@@ -71,49 +71,49 @@ public class Menu  {
 			System.out.println("Invalid Entry");
 			System.out.println();
 			System.out.println("Please enter a numeric value for selection");
-			welcomeMenu(); 
+			welcomeMenu();
 			printFooter();
 		}
 
 	}
 
 	private static void loginMenu() {
-		System.out.println("\n\n1. Retry" + "\n2. Forget password" + "\n3. Return to Main Menu" + "\n0. Exit");
+		System.out.println("\n\n1. Retry" + "\n2. Forget password" + "\n3. Return to Main Menu" + "\n0. Exit \n");
 		printFooter();
 		Scanner kb = new Scanner(System.in);
 		try {
-		do {
-		int retry = kb.nextInt();
-		switch(retry)
-		{
-			case 1: 
-				verifyLogin();
-				
-				break;
-			
-			case 2:
-				System.out.println();
-				System.out.println("Forget password method!");
-				printFooter();
-				break;
-				
-			case 3: 
-				System.out.println("Return to main menu");
-				printFooter();
-				break;
-			case 0:
-				System.out.println();
-				System.out.println("Exiting.. Thanks for using our Application!");
-				printFooter();
-				quit = true;
-				System.exit(0);
-				break;
-			default:
-				System.out.println();
-				System.out.println("Invalid choice! \nPlease choose either enter option 1,2,3 or 0!");
-				printFooter();
-		}
-		}while(!quit); // Exception handling again
+			do {
+				int retry = kb.nextInt();
+				switch (retry) {
+				case 1:
+					verifyLogin();
+
+					break;
+
+				case 2:
+					System.out.println();
+					System.out.println("Forget password method!");
+					printFooter();
+					break;
+
+				case 3:
+					System.out.println("Returning to main menu");
+					welcomeMenu();
+					printFooter();
+					break;
+				case 0:
+					System.out.println();
+					System.out.println("Exiting.. Thanks for using our Application!");
+					printFooter();
+					quit = true;
+					System.exit(0);
+					break;
+				default:
+					System.out.println();
+					System.out.println("Invalid choice! \nPlease choose either enter option 0,1,2, and 3!");
+					printFooter();
+				}
+			} while (!quit); // Exception handling again
 		} catch (InputMismatchException e) {
 			System.out.println();
 			System.out.println("Invalid Entry");
@@ -122,10 +122,9 @@ public class Menu  {
 			loginMenu();
 			printFooter();
 		}
-		
-			
-		}
-				
+
+	}
+
 	public static void verifyLogin() {
 		Scanner kbd = new Scanner(System.in);
 		int loginuserID = 0;
@@ -145,7 +144,6 @@ public class Menu  {
 
 			while (sc.hasNext() && file.exists()) {
 
-				
 				int tempUserID = sc.nextInt();
 				String tempPassword = sc.next();
 
@@ -160,7 +158,7 @@ public class Menu  {
 				System.out.println();
 				System.out.println("Invalid login!! Please try again!");
 				loginMenu();
-				
+
 			}
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
