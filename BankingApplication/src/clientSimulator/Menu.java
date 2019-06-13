@@ -1,5 +1,5 @@
 
-package com.springboot.bankapplication;
+package clientSimulator;
 
 import java.io.File;
 import java.io.FileNotFoundException;
