@@ -1,4 +1,4 @@
-package com.springboot.bankapplication;
+package beans;
 
 public class Customer extends User  {
 	private int customerID;

@@ -1,6 +1,8 @@
-package com.springboot.bankapplication;
+package clientSimulator;
 
 import java.util.Scanner;
+
+import com.springboot.bankapplication.Menu;
 
 public class BankAppMain   {
 
