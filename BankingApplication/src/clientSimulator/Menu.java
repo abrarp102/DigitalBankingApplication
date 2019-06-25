@@ -6,7 +6,7 @@ import java.io.FileNotFoundException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Menu {
+public class Menu extends CustomerDashboard {
 
 	private static boolean quit = false;
 
@@ -151,6 +151,8 @@ public class Menu {
 					found = true;
 					System.out.println();
 					System.out.println("Login Succesful!!");
+					System.out.println();
+					CustomerDasboardMenu();
 				}
 
 			}
